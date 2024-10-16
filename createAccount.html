@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Teko", 'san-serif';
+        }
+
+        body {
+            text-align: center;
+           background-image: url("home.jpg");
+           background-repeat: repeat-y;
+           background-size: cover;
+        }
+
+        form {
+            background-color: #E0D8D8;
+            width: 80%;
+            margin:auto;
+            margin-bottom: 5%;
+            padding: 1%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px #292F36; /* add shadow to form element*/
+        }
+
+        #coName {
+            font-size: 60px;
+            color: #A41F13;
+        }
+
+        #coNameDiv {
+            width: 60%;
+            margin: auto;
+            background-color: #E0D8D8;
+            box-shadow: 0px 5px 15px #292F36;
+            border-radius: 15px;
+        }
+
+
+        h1 {
+            font-size: 35px;
+            color: #292F36;
+        }
+
+        #headerDiv h1{
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #292F36;
+            margin: 5% 30% 0% 0%;
+        }
+
+        #create {
+            width: 20%;
+            border-radius: 15px;
+            margin: auto;
+            background-color: #92221a;
+            color: #FAF5F1;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #create:hover {
+           background-color:#ab554e;
+           transform: translateY(5px);
+        }
+
+        #create:active {
+            background-color: black;
+            color: white;
+        }
+
+        input {
+            width: 50%;
+            font-size: 20px;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        input:focus {
+            border: 2px solid #A41F13;
+        }
+
+        #headerDiv {
+            background-color: #FAF5F1;
+            width: 60%;
+            border-radius: 15px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0px 5px 15px grey;
+        }
+
+        #mainDiv {
+            background-color: #FAF5F1;
+            width: 80%;
+            border-radius: 15px;
+            margin: 2% auto;
+            padding: 2%;
+            box-shadow: 0px 5px 15px grey;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        footer p{
+            color: #A41F13;
+            position: fixed;
+            bottom: 0;
+            background-color: #333;
+            color: white;
+            margin: auto;
+            width: 100%;
+        }
+
+
+        
+
+        @media screen and (max-width: 600px){
+        #coName{
+            font-size: 50px;
+        }
+         #headerDiv h1{
+            font-size: 30px;
+         }
+         h3{
+            font-size: 20px;
+         }
+         input{
+            height: 20px;
+         }
+         #create{
+            height: 30px;
+            font-size: 20px;
+         }
+         #create:hover{
+            transform: translateY(2px);
+         }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="coNameDiv">
+        <h1 id="coName">Office Pro</h1>
+    </div>
+    <form action="servletName" method="post">
+        <!-- add servlet to validate information and send to home page signed in-->
+        <div id="headerDiv">
+            <h1>Create Account</h1>
+        </div>
+        <div id="mainDiv">
+            <h3>First Name:</h3>
+                <input type="text" name="fName" required>
+            <h3>Last Name:</h3>
+                <input type="text" name="lName" required>
+            <h3>Email:</h3>
+                <input type="text" name="email" required>
+            <h3>Phone:</h3>
+                <input type="text" name="phone" required>
+            <h3>Address:</h3>
+                <input type="text" name="address" required>
+        </div>
+        <input type="submit" name="submit" value="Create" id="create">
+    </form>
+    <footer>
+        <p>&copy; 2024 Office Pro. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
